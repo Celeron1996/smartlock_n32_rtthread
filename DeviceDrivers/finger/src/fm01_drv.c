@@ -34,6 +34,7 @@ const struct rt_finger_ops		ops = {fm01_control};
 
 static struct rt_finger_device finger;
 
+void (*touch_irq)(void) = RT_NULL;	/* 触摸中断回调函数，由应用注册 */
 
 
 int fm01_init(void)
@@ -103,7 +104,7 @@ rt_err_t fm01_control(struct rt_finger_device *finger, int cmd, void *arg)
 		}
 		case FINGER_CMD_SET_TOUCH_IRQ:
 		{
-			
+			touch_irq = (void (*)(void))arg;
 		}
 		default:
 		{

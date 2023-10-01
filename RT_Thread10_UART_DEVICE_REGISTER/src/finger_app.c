@@ -73,6 +73,9 @@ int finger_app_init(void)
 	                    sizeof(mb_pool) / 4,   
 	                    RT_IPC_FLAG_FIFO);
 
+	/* 设置触摸中断回调函数 */
+	err = rt_device_control(finger, FINGER_CMD_SET_TOUCH_IRQ, (void *)finger_touch_irq_call);
+
 	/* 注册功耗敏感设备 */
 	err = mypm_register(&finger_pm_device,
 											NAME,
@@ -374,3 +377,8 @@ rt_err_t finger_sleep(void *parameter)
 	return RT_EOK;
 }
 
+
+
+void finger_touch_irq_call(void)
+{
+}

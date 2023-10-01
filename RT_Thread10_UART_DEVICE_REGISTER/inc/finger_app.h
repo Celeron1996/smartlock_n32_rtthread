@@ -25,6 +25,7 @@ void finger_verify_thread(void *parameter);
 void finger_thread_entry(void *parameter);
 rt_err_t finger_voter(void *parameter);
 rt_err_t finger_sleep(void *parameter);
+void finger_touch_irq_call(void);
 
 
 #endif
