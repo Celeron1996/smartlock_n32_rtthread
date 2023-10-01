@@ -31,7 +31,6 @@
 ".\objects\finger_app.o"
 ".\objects\event_manager.o"
 ".\objects\mypm.o"
-".\objects\drv_gpio.o"
 ".\objects\drv_usart.o"
 ".\objects\fm01_drv.o"
 ".\objects\fm01_bsp.o"

@@ -204,14 +204,6 @@ void fm01_exit_config(FunctionalState cmd)
 }
 
 
-
-void fm01_exit_handler(void)
-{
-	
-}
-
-
-
 __WEAK void fm01_uart_int_getc(uint8_t data){}
 
 

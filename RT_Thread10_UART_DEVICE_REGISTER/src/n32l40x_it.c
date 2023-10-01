@@ -37,6 +37,24 @@
 #include "main.h"
 
 
+__WEAK void exti0_irqhandler_call(void){}
+__WEAK void exti1_irqhandler_call(void){}
+__WEAK void exti2_irqhandler_call(void){}
+__WEAK void exti3_irqhandler_call(void){}
+__WEAK void exti4_irqhandler_call(void){}
+__WEAK void exti5_irqhandler_call(void){}
+__WEAK void exti6_irqhandler_call(void){}
+__WEAK void exti7_irqhandler_call(void){}
+__WEAK void exti8_irqhandler_call(void){}
+__WEAK void exti9_irqhandler_call(void){}
+__WEAK void exti10_irqhandler_call(void){}
+__WEAK void exti11_irqhandler_call(void){}
+__WEAK void exti12_irqhandler_call(void){}
+__WEAK void exti13_irqhandler_call(void){}
+__WEAK void exti14_irqhandler_call(void){}
+__WEAK void exti15_irqhandler_call(void){}
+
+
 /******************************************************************************/
 /*            Cortex-M4 Processor Exceptions Handlers                         */
 /******************************************************************************/
@@ -110,5 +128,65 @@ void DMA_IRQ_HANDLER(void)
 /*  available peripheral interrupt handler's name please refer to the startup */
 /*  file (startup_n32l40x.s).                                                 */
 /******************************************************************************/
+
+
+
+void EXTI0_IRQHandler(void)
+{
+	rt_interrupt_enter();
+	exti0_irqhandler_call();
+	rt_interrupt_leave();
+}
+
+void EXTI1_IRQHandler(void)
+{
+	rt_interrupt_enter();
+	exti1_irqhandler_call();
+	rt_interrupt_leave();
+}
+
+void EXTI2_IRQHandler(void)
+{
+	rt_interrupt_enter();
+	exti2_irqhandler_call();
+	rt_interrupt_leave();
+}
+
+void EXTI3_IRQHandler(void)
+{
+	rt_interrupt_enter();
+	exti3_irqhandler_call();
+	rt_interrupt_leave();
+}
+
+void EXTI4_IRQHandler(void)
+{
+	rt_interrupt_enter();
+	exti4_irqhandler_call();
+	rt_interrupt_leave();
+}
+
+void EXTI9_5_IRQHandler(void)
+{
+	rt_interrupt_enter();
+	exti5_irqhandler_call();
+	exti6_irqhandler_call();
+	exti7_irqhandler_call();
+	exti8_irqhandler_call();
+	exti9_irqhandler_call();
+	rt_interrupt_leave();
+}
+
+void EXTI15_10_IRQHandler(void)
+{
+	rt_interrupt_enter();
+	exti10_irqhandler_call();
+	exti11_irqhandler_call();
+	exti12_irqhandler_call();
+	exti13_irqhandler_call();
+	exti14_irqhandler_call();
+	exti15_irqhandler_call();
+	rt_interrupt_leave();
+}
 
 

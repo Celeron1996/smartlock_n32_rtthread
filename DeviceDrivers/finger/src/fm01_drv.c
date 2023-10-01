@@ -550,3 +550,14 @@ void fm01_uart_int_getc(uint8_t data)
 }
 
 
+void fm01_touch_irq_call(void)
+{
+	if(RESET != EXTI_GetITStatus(FM01_TOUCH_INT_EXIT_LINE))
+	{
+		if (touch_irq != RT_NULL)
+		{
+			touch_irq();
+		}
+		EXTI_ClrITPendBit(FM01_TOUCH_INT_EXIT_LINE);
+	}
+}

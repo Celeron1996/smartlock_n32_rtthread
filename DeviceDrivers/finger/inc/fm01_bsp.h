@@ -41,7 +41,8 @@
 #define FM01_TOUCH_INT_EXIT_LINE			EXTI_LINE1
 /* touch int : Configure the NVIC Preemption Priority Bits */
 #define FM01_TOUCH_INT_NVIC_IRQ_CHANNEL		EXTI1_IRQn
-
+/* touch gpio exti call define */
+#define fm01_touch_irq_call						exti0_irqhandler_call
 
 /* gpio define : uart rx */
 #define FM01_RX_GPIO_PORT					GPIOA
@@ -83,7 +84,6 @@ void fm01_gpio_init(void);
 void fm01_uart_init(void);
 void fm01_uart_deinit(void);
 void fm01_exit_config(FunctionalState cmd);
-void fm01_exit_handler(void);
 
 
 

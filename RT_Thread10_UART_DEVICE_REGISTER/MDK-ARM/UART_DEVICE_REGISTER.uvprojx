@@ -575,11 +575,6 @@
           <GroupName>Device_Drivers</GroupName>
           <Files>
             <File>
-              <FileName>drv_gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\DeviceDrivers\gpio\src\drv_gpio.c</FilePath>
-            </File>
-            <File>
               <FileName>drv_usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\DeviceDrivers\uart\src\drv_usart.c</FilePath>
