@@ -39,16 +39,16 @@ static rt_thread_t delete_thread = RT_NULL;
 static rt_device_t finger;
 static struct rt_finger_info finger_info;
 
-
-
-
+/* 事件定义 */
 static char mb_pool[MB_BUFFER_SIZE];
-
 static event_value finger_event_value;
-
 static event finger_event;
 
+/* 功耗敏感设备定义 */
 static struct mypm_device finger_pm_device = {};
+
+/* 触摸中断标志位定义 */
+static volatile uint8_t finger_touch_flag = 0;
 
 int finger_app_init(void)
 {
@@ -381,4 +381,5 @@ rt_err_t finger_sleep(void *parameter)
 
 void finger_touch_irq_call(void)
 {
+	finger_touch_flag = 1;
 }

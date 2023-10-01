@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\UART_DEVICE_REGISTER.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\UART_DEVICE_REGISTER.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6180002: Last Updated: Sun Oct  1 15:56:19 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6180002: Last Updated: Sun Oct  1 15:58:22 2023
 <BR><P>
 <H3>Maximum Stack Usage =        372 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1365,11 +1365,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_serial_open
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_rt_thread_init
+<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_rt_thread_init
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_calloc
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_object_allocate
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_device_create
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_serial_open
 </UL>
 
 <P><STRONG><a name="[f2]"></a>rt_memcpy</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, kservice.o(.text), UNUSED)
@@ -1532,9 +1532,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_kprintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_serial_close
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_serial_open
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_serial_init
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_serial_init
 <LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_pin_read
 <LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_pin_irq_enable
 <LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_pin_detach_irq
@@ -1633,6 +1631,8 @@ Global Symbols
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_serial_control
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_serial_write
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_serial_read
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_serial_close
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_serial_open
 </UL>
 
 <P><STRONG><a name="[ef]"></a>rt_system_heap_init</STRONG> (Thumb, 204 bytes, Stack size 24 bytes, mem.o(.text))
@@ -1659,8 +1659,7 @@ Global Symbols
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
 </UL>
-<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_serial_open
-<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_calloc
+<BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_calloc
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_realloc
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_malloc_align
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_strdup
@@ -1668,6 +1667,7 @@ Global Symbols
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_object_allocate
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_device_create
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_create
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_serial_open
 </UL>
 
 <P><STRONG><a name="[f0]"></a>rt_realloc</STRONG> (Thumb, 344 bytes, Stack size 24 bytes, mem.o(.text), UNUSED)
@@ -1696,13 +1696,13 @@ Global Symbols
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_enable
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_hw_interrupt_disable
 </UL>
-<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_serial_close
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_realloc
+<BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_realloc
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_free_align
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mb_delete
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_object_delete
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_idle_excute
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_device_destroy
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_serial_close
 </UL>
 
 <P><STRONG><a name="[f3]"></a>rt_calloc</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, mem.o(.text), UNUSED)
@@ -2724,7 +2724,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> finger_app.o(.rti_fn.6)
 </UL>
-<P><STRONG><a name="[59]"></a>finger_touch_irq_call</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, finger_app.o(.text))
+<P><STRONG><a name="[59]"></a>finger_touch_irq_call</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, finger_app.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> finger_app.o(.text)
 </UL>
 <P><STRONG><a name="[5a]"></a>finger_voter</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, finger_app.o(.text))
